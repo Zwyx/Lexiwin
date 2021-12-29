@@ -1,0 +1,62 @@
+Lexiwin - ChangeLog
+
+********************************************************************
+* Note that only the latest version is present in this repository. *
+********************************************************************
+
+Lexiwin 8.1 - March 5, 2013
+    - Modified the function that switch a window to the next monitor to fix a bug.
+    - Modified the browse functionality with MButton & Wheel* to send the browse message to the window that is under the
+        mouse pointer.
+    - Modified the mouse part of the windows manager so that it is possible to close, minimize, maximize/restore, and
+        switch screen with left, right, and middle mouse buttons continuously.
+    - Removed Win + [left, right, and middle mouse buttons] because these shortcuts are no longer needed thanks to the
+        mouse part of the Windows manager.
+    - Replaced Win + B by Win + Alt + V to paste a FIFO element without formating (consistent with Ctrl + Alt + V for
+        the classic clipboard).
+    - Replaced CapsLock + Shift + A/Z/E/R/T/Y/U/I/O/P by CapsLock + Alt + A/Z/E/R/T/Y/U/I/O/P to paste without formating
+        the content of a clipboard register.
+    - Added CapsLock + C/X/V to copy/cut/paste, and CapsLock + Alt + V to paste without formating.
+    - Added Win + F12 to terminate Lexiwin.
+    - Removed the availability of terminating Lexiwin from clipboard menus.
+    - Modified tooltips text in order to be more comprehensible.
+
+Lexiwin 8.0 - February 4, 2013
+    - Added Win + F1 to display quick help.
+    - Added Win + F2 and Win + F3 to activate/deactivate the clipboard manager and the mouse part of the windows
+        manager; these parameters are stored in the new ClipboardManager and WindowsManager sections in the
+        configuration file.
+    - Added Win + F4 to open the configuration file.
+    - Added Win [+ Shift] + 1/2/3/4/5/6/7/8/9/0 to save and restore the active window's size and position; the saved
+        sizes and positions are stored in the new WindowsManager section of the configuration file.
+    - Modified quick launch management: now Lexiwin does not need to be restarted after changing quick launch lists in
+        the configuration file; the number of each item is compute by Lexiwin at execution; and the syntax of the
+        configuration file is "Pathx" and "Namex" (instead of "xPath" and "xName").
+    - Modified the NumberOfCaches parameter in the configuration file: it has been moved from the General section to the
+        ClipboardManager section.
+    - Modified tooltips text in order to be more comprehensible.
+    - Removed CapsLock + Ctrl + Wheel* for multimedia volume due to problems with fast scrolling.
+    - Added #MaxHotkeysPerInterval 200 to prevent a warning dialog to be displayed while fast scrolling.
+    - Modified Sleep duration from 100 to 50 ms between Send {Volume_*} and SoundGet.
+    - For the portable version: the configuration file and the clipboard registers data are now read and write in the
+        same directory than the Lexiwin executable.
+
+Lexiwin 7.0 - December 30, 2012
+    - Removed CapsLock + *Button to cancel Quick Launch.
+    - Added Sleep 100 between Send {Volume_*} and SoundGet.
+    - Added Clipboard registers content saving in files.
+
+Lexiwin 6.0 - December 10, 2012
+    - Added the ability to display the tooltip on configurable coordinates.
+    - Removed Win + * shortcuts for AltTab menu because of a bug (the Win key remained down after Win + L).
+    - Removed CapsLock + Q for clipboard registers unformatted paste.
+    - Added CapsLock + Shift for clipboard registers unformatted paste.
+    - Added CapsLock + Ctrl + Wheel* for multimedia volume.
+    - Added Win + N to reset the FIFO clipboard.
+    - Modified clipboard registers keys.
+    - Modified Text Edit keys.
+    - Added CapsLock [+ Maj] + 1/2/3/4/5/6/7/8/9/0 to launch directly Quick Launch items.
+    - Added CapsLock + $/* for Page Up/Down.
+    - Removed Horizontal Scroll.
+
+Lexiwin 5.0 - November 27, 2012 - First Public Release
